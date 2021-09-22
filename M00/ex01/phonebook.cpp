@@ -45,7 +45,7 @@ int main()
                 ph.print_contacts(ph);
             }
         else
-            std::cout << "COMMAND NOT FOUND" << std::endl;
+            std::cout << "COMMAND NOT FOUND\n | Valid commands : 'add , search, exit'" << std::endl;
     }
 
     return 0;
