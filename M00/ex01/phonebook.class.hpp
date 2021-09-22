@@ -26,11 +26,13 @@ class Phonebook {
 	std::string	nickname;
 	int			phone_number;
 	std::string darkest_secret;
+	int			id;
 	
 		Phonebook(void);
 		~Phonebook(void);
 		void	add_contact(std::string f_n, std::string l_n, std::string n_n,
 							int phone_n, std::string d_secret);
+		void 	print_contacts(Phonebook obj);
 
 };
 
