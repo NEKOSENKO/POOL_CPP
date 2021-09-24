@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:28:22 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/24 12:43:23 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/24 12:50:26 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int main()
                 
                 printf("||%d|| \n", i);
 
+                if (i == 7)
+                    i = 0;
                 contact[i].add_contact(first_name, last_name, nickname,
                                 phone_number, darkest_secret);
                 i++;

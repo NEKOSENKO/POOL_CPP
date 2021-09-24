@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 12:27:02 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/24 12:13:54 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/24 13:21:02 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,70 @@
 
 class Contact {
 
-	public :
+	private :
 	
 		std::string first_name;
 		std::string last_name;
 		std::string	nickname;
 		int			phone_number;
 		std::string darkest_secret;
-		int			id;
+
+	public :
 
 	Contact(void);
 	~Contact(void);
 	void	add_contact(std::string f_n, std::string l_n, std::string n_n,
 							int phone_n, std::string d_secret);
 	void 	print_contacts(Contact obj);
+	
+	void		set_first_n(std::string fn)
+	{
+		first_name = fn;
+	}	
+		
+	std::string	get_first_n(void)
+	{
+		return first_name;
+	}
+
+	void		set_last_n(std::string ln)
+	{	
+		last_name = ln;
+	}
+		
+	std::string	get_last_n(void)
+	{
+		return last_name;
+	}
+		
+	void		set_nick_n(std::string nn)
+	{
+		nickname = nn;
+	}
+	
+	std::string	get_nick_n(void)
+	{
+		return nickname;
+	}
+	
+	void		set_phone_n(int phn)
+	{
+		phone_number = phn;	
+	}
+	
+	int	get_phone_n(void)
+	{
+		return phone_number;	
+	}
+	void		set_dark_s(std::string ds)
+	{
+		darkest_secret = ds;
+	}
+	std::string	get_dark_s(void)
+	{
+		return darkest_secret;
+	}
+	
 
 };
 
