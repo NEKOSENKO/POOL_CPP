@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:28:22 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/24 12:50:26 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/24 16:31:40 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,21 @@ int main()
             }
         else if (com.compare("SEARCH") == 0 || com.compare("search") == 0)
             {
+                std::cout << "|";
+                std::cout << std::left << std::setw(10) << "Index";
+                std::cout << "|";
+                std::cout << std::left << std::setw(10) << "First Name";
+                std::cout << "|";
+                std::cout << std::left << std::setw(10) << "Last Name";
+                std::cout << "|";
+                std::cout << std::left << std::setw(10) << "Nickname";
+                std::cout << "|" << std::endl;
                 int j = 0;
                 while (j < 8)
                 {
-                    contact[j].print_contacts(contact[j]);
+                    contact[j].print_contacts(contact[j], j);
                      j++;
                 }
-
             }
         else
             std::cout << "COMMAND NOT FOUND\n | Valid commands : 'add , search, exit'" << std::endl;
