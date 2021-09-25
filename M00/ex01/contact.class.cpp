@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 12:09:00 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/24 16:34:55 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/25 11:21:57 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,19 @@ void Contact::print_contacts(Contact obj, int i)
 			// std::cout <<  obj.phone_number << std::endl;
 			// std::cout <<  obj.darkest_secret << std::endl;
 }
+void Contact::print_all_atts(Contact obj)
+{
+    std::cout << Contact::get_first_n() << std::endl;
+    std::cout << Contact::get_last_n() << std::endl;
+    std::cout << Contact::get_nick_n() << std::endl;
+    std::cout << Contact::get_phone_n() << std::endl;
+    std::cout << Contact::get_dark_s() << std::endl;
+}
+
 void Contact::add_contact(std::string f_n, std::string l_n, std::string n_n,
 				int phone_n, std::string d_secret)
 {
-		Contact::darkest_secret = d_secret;
-		Contact::first_name = f_n; Contact::last_name = l_n;
-		Contact::nickname = n_n;  Contact::phone_number = phone_n;
+		Contact::set_dark_s(d_secret);
+		Contact::set_first_n(f_n); Contact::set_last_n(l_n);
+		Contact::set_nick_n(n_n);  Contact::set_phone_n(phone_n);
 }

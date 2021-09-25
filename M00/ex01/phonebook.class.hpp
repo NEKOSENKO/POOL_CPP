@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 12:27:02 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/24 16:31:29 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/25 11:25:00 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class Contact {
 	void	add_contact(std::string f_n, std::string l_n, std::string n_n,
 							int phone_n, std::string d_secret);
 	void 	print_contacts(Contact obj, int i);
+	void 	print_all_atts(Contact obj);
 	
 	void		set_first_n(std::string fn)
 	{
