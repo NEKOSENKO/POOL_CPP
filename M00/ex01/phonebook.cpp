@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:28:22 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/25 11:28:40 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/25 15:17:45 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main()
 		int			phone_number;
 		std::string darkest_secret;
         int i = 0;
+        int nbr_contacts = 0;
         
     while (1)
     {
@@ -48,13 +49,12 @@ int main()
 
                 std::cout << "Darkest Secret : ";
                 std::cin >> darkest_secret;
-                
-                printf("||%d|| \n", i);
 
                 if (i == 7)
                     i = 0;
                 contact[i].add_contact(first_name, last_name, nickname,
                                 phone_number, darkest_secret);
+                nbr_contacts++;
                 i++;
             }
         else if (com.compare("SEARCH") == 0 || com.compare("search") == 0)
@@ -69,21 +69,24 @@ int main()
                 std::cout << std::left << std::setw(10) << "Nickname";
                 std::cout << "|" << std::endl;
                 int j = 0;
-                while (j < 8)
+                while (j < nbr_contacts)
                 {
                     contact[j].print_contacts(contact[j], j);
                      j++;
                 }
-                // while (1)
-                // {
+                while (1)
+                {
                     int input;
                     std::cout << "Enter index of desired contacts ";
                     std::cin >> input;
-                    if (input < 8 || input >= 0)
+                    if (input < 9 || input > 0)
+                    {
                         contact[input - 1].print_all_atts(contact[input - 1]);
+                        break;
+                    }
                     else
                         std::cout << "Index Does not exist" << std::endl;
-                // }
+                }
             }
         else
             std::cout << "COMMAND NOT FOUND\n | Valid commands : 'add , search, exit'" << std::endl;

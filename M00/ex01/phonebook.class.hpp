@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 12:27:02 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/25 11:25:00 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/25 12:33:24 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class Contact {
 
 	public :
 
+	int nbr_contacts;
 	Contact(void);
 	~Contact(void);
 	void	add_contact(std::string f_n, std::string l_n, std::string n_n,
