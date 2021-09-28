@@ -6,20 +6,28 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:28:22 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/25 15:17:45 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/28 15:16:02 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.class.hpp"
 
+bool is_number(std::string str)
+{
+    for (int i = 0; i < str.length(); i++)
+    if (isdigit(str[i]) == false)
+      return false;
+    return true;
+}
+
 int main()
 {
-        Contact *contact = new Contact[7];
-        Contact ph;
+        
+        Phonebook ph;
         std::string first_name;
 		std::string last_name;
 		std::string	nickname;
-		int			phone_number;
+		std::string	phone_number;
 		std::string darkest_secret;
         int i = 0;
         int nbr_contacts = 0;
@@ -45,14 +53,25 @@ int main()
                 std::cin >> nickname;
 
                 std::cout << "PhoneNumber : ";
-                std::cin >> phone_number;
+                while (1)
+                {
+                    std::cin >> phone_number;
+                    if (is_number(phone_number) == true)
+                        break;
+                    else
+                    {
+                        std::cout << "Phone number must conatin only numbers" << std::endl; 
+                        std::cout << "PhoneNumber : ";   
+                        phone_number = "";
+                    }
+                }
 
                 std::cout << "Darkest Secret : ";
                 std::cin >> darkest_secret;
 
                 if (i == 7)
                     i = 0;
-                contact[i].add_contact(first_name, last_name, nickname,
+                ph.contact[i].add_contact(first_name, last_name, nickname,
                                 phone_number, darkest_secret);
                 nbr_contacts++;
                 i++;
@@ -71,7 +90,7 @@ int main()
                 int j = 0;
                 while (j < nbr_contacts)
                 {
-                    contact[j].print_contacts(contact[j], j);
+                    ph.contact[j].print_contacts(ph.contact[j], j);
                      j++;
                 }
                 while (1)
@@ -81,11 +100,12 @@ int main()
                     std::cin >> input;
                     if (input < 9 || input > 0)
                     {
-                        contact[input - 1].print_all_atts(contact[input - 1]);
+                        ph.contact[input - 1].print_all_atts(ph.contact[input - 1]);
                         break;
                     }
                     else
-                        std::cout << "Index Does not exist" << std::endl;
+                        std::cout << "Unvalid Index"; 
+                    
                 }
             }
         else
