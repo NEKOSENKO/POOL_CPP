@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 12:09:00 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/28 12:24:09 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/28 17:10:05 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Contact::Contact(void)
 {
-	 Contact::nbr_contacts++;
+	Contact::nbr_contacts++;
 }
 
 Contact::~Contact(void)

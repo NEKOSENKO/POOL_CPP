@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 12:27:02 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/28 12:41:36 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/28 17:14:19 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@ class Phonebook {
 	
 	public :
 	 
-	 Contact contact[7];
-	 int id;
+	Contact contact[7];
+	int id;
 
 	
 		Phonebook(void);
