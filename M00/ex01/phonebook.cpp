@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:28:22 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/29 12:08:54 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/09/30 11:53:00 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ int main()
 			exit(0);
 		else if (com.compare("ADD") == 0 || com.compare("add") == 0)
 			{
+				if (i == 7)
+					i = 0;
+				if (nbr_contacts == 7)
+					nbr_contacts = 0;
 				std::cout << "Please enter contact @info : " << std::endl;
 				std::cout << "First Name : ";
 				std::cin >> first_name;
@@ -69,12 +73,11 @@ int main()
 				std::cout << "Darkest Secret : ";
 				std::cin >> darkest_secret;
 
-				if (i == 6)
-					i = 0;
 				ph.contact[i].add_contact(first_name, last_name, nickname,
 								phone_number, darkest_secret);
 				nbr_contacts++;
 				i++;
+				printf(" || %d || \n", i);
 			}
 		else if (com.compare("SEARCH") == 0 || com.compare("search") == 0)
 			{
@@ -88,7 +91,7 @@ int main()
 				std::cout << std::left << std::setw(10) << "Nickname";
 				std::cout << "|" << std::endl;
 				int j = 0;
-				while (j < nbr_contacts)
+				while (j < 7)
 				{
 					ph.contact[j].print_contacts(ph.contact[j], j);
 					 j++;
@@ -106,7 +109,7 @@ int main()
 						std::cout << "Unvalid Index" << std::endl; 
 						break;
 					}
-					if (input <= i)
+					if (input <= 7)
 					{
 						ph.contact[input - 1].print_all_atts(ph.contact[input - 1]);
 						break;
