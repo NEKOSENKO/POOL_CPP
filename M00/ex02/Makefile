@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+         #
+#    By: mbrija <mbrija@student.1337.ma>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/30 12:13:31 by mbrija            #+#    #+#              #
-#    Updated: 2021/09/30 12:13:39 by mbrija           ###   ########.fr        #
+#    Updated: 2021/10/07 13:30:16 by mbrija           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS=*.cpp *.hpp
+SRCS=*.cpp
 FLAGS=-Wextra -Wall -Werror
 
-NAME=phonebook
+NAME=accounts
 
 $(NAME):
 	clang++ $(FLAGS) $(SRCS) -o $(NAME)
