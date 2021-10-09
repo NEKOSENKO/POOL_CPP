@@ -12,6 +12,10 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
+#include <iostream>
+#include <iomanip>
+#include <string>
+
 // ************************************************************************** //
 //                               Account Class                                //
 // ************************************************************************** //
@@ -23,19 +27,58 @@ public:
 
 	typedef Account		t;
 
-	static int	getNbAccounts( void );
-	static int	getTotalAmount( void );
-	static int	getNbDeposits( void );
-	static int	getNbWithdrawals( void );
-	static void	displayAccountsInfos( void );
+	// static int	getNbAccounts( void );
+	// static int	getTotalAmount( void );
+	// static int	getNbDeposits( void );
+	// static int	getNbWithdrawals( void );
+	// static void	displayAccountsInfos( void );
 
 	Account( int initial_deposit );
 	~Account( void );
 
-	void	makeDeposit( int deposit );
-	bool	makeWithdrawal( int withdrawal );
-	int		checkAmount( void ) const;
-	void	displayStatus( void ) const;
+	// void	makeDeposit( int deposit );
+	// bool	makeWithdrawal( int withdrawal );
+	// int		checkAmount( void ) const;
+	// void	displayStatus( void ) const;
+
+
+
+	static int getNbAccounts()
+	{
+		return _nbAccounts;
+	}
+	static int	    getTotalAmount( void )
+	{
+		return _totalAmount;
+	}
+	static int	    getNbDeposits( void )
+	{
+		return 0;
+	}
+	static int	    getNbWithdrawals( void )
+	{
+		return 0;
+	}
+	static void    displayAccountsInfos( void )
+	{
+		return ;
+	}
+	void	makeDeposit( int deposit )
+	{
+		return ;
+	}
+	bool	makeWithdrawal( int withdrawal )
+	{
+		return 1;
+	}
+ 	int		checkAmount( void ) const
+	{
+		return 0;
+	}
+	void	displayStatus( void ) const
+	{
+		return ;
+	}
 
 
 private:
