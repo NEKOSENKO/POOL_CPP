@@ -6,15 +6,15 @@
 #    By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/30 12:13:31 by mbrija            #+#    #+#              #
-#    Updated: 2021/10/01 13:10:10 by mbrija           ###   ########.fr        #
+#    Updated: 2021/10/09 12:23:09 by mbrija           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS=Account.cpp
+SRCS=*.cpp
 FLAGS=-Wextra -Wall -Werror
 
-NAME=account
+NAME=accounts
 
 $(NAME):
 	clang++ $(FLAGS) $(SRCS) -o $(NAME)
