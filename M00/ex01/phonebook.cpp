@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/12 13:28:22 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/30 11:53:00 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/10/09 13:07:20 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,19 @@
 
 bool is_number(std::string str)
 {
-	for (int i = 0; i < str.length(); i++)
+	for (int i = 0; i < (int)str.length(); i++)
 	if (isdigit(str[i]) == false)
 	  return false;
 	return true;
+}
+
+void check_eof(void)
+{
+    if (std::cin.eof())
+    {
+        std::cout << "EOF Detected, quitting..\n";
+        exit(0);
+    }
 }
 
 int main()
@@ -38,6 +47,7 @@ int main()
 		  std::cout << "Welcome to your old af phonebook rusty program : " << std::endl;
 		  std::cout << "Please insert command : ";
 		std::cin >> com;
+		check_eof();
 		if (com.compare("EXIT") == 0 || com.compare("exit") == 0)
 			exit(0);
 		else if (com.compare("ADD") == 0 || com.compare("add") == 0)
@@ -77,7 +87,6 @@ int main()
 								phone_number, darkest_secret);
 				nbr_contacts++;
 				i++;
-				printf(" || %d || \n", i);
 			}
 		else if (com.compare("SEARCH") == 0 || com.compare("search") == 0)
 			{
@@ -101,6 +110,7 @@ int main()
 					std::string it;
 					std::cout << "Enter index of desired contacts ";
 					std::cin >> it;
+					check_eof();
 					int input;
 					if (is_number(it) == true)
 					  input = stoi(it);
@@ -111,7 +121,7 @@ int main()
 					}
 					if (input <= 7)
 					{
-						ph.contact[input - 1].print_all_atts(ph.contact[input - 1]);
+						ph.contact[input - 1].print_all_atts();
 						break;
 					}
 					else

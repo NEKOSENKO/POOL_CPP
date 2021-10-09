@@ -6,12 +6,12 @@
 #    By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/13 12:38:21 by mbrija            #+#    #+#              #
-#    Updated: 2021/09/30 12:07:59 by mbrija           ###   ########.fr        #
+#    Updated: 2021/10/09 13:02:54 by mbrija           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS=*.cpp *.hpp
+SRCS=*.cpp 
 FLAGS=-Wextra -Wall -Werror
 
 NAME=phonebook

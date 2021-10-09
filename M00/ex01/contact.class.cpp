@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/24 12:09:00 by mbrija            #+#    #+#             */
-/*   Updated: 2021/09/28 17:10:05 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/10/09 13:05:59 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void Contact::print_contacts(Contact obj, int i)
 			// std::cout <<  obj.phone_number << std::endl;
 			// std::cout <<  obj.darkest_secret << std::endl;
 }
-void Contact::print_all_atts(Contact obj)
+void Contact::print_all_atts(void)
 {
     std::cout << Contact::get_first_n() << std::endl;
     std::cout << Contact::get_last_n() << std::endl;
