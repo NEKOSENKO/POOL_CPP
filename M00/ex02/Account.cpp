@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 12:07:13 by mbrija            #+#    #+#             */
-/*   Updated: 2021/10/09 12:23:54 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/10/09 12:45:02 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Account::Account( void )
 }
 Account::Account( int initial_deposit )
 {
-	//timehere
+	_displayTimestamp();
 	_accountIndex = _nbAccounts++;
 	_amount = initial_deposit;
 	_totalAmount += initial_deposit;
@@ -31,7 +31,7 @@ Account::Account( int initial_deposit )
 }
 Account::~Account( void )
 {
-    //timehere
+    _displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";closed" << std::endl;
 }
 
@@ -53,7 +53,7 @@ int	    Account::getNbWithdrawals( void )
 }
 void    Account::displayAccountsInfos( void )
 {
-    //timehere
+    _displayTimestamp();
 	std::cout << "accounts:" << _nbAccounts << ";total:" << _totalAmount << ";deposits:" <<
 		_totalNbDeposits << ";withdrawals:" << _totalNbWithdrawals << std::endl;
 
@@ -66,7 +66,7 @@ int Account::_totalNbWithdrawals = 0;
 
 void	Account::makeDeposit( int deposit )
 {
-    //timehere
+    _displayTimestamp();
 	_totalNbDeposits++;
 	_nbDeposits++;
 	_amount += deposit;
@@ -78,6 +78,7 @@ void	Account::makeDeposit( int deposit )
 bool	Account::makeWithdrawal( int withdrawal )
 {
     //timehere
+    _displayTimestamp();
 	if (withdrawal <= _amount)
 	{
 		_totalNbWithdrawals++;
@@ -102,9 +103,19 @@ int		Account::checkAmount( void ) const
 void	Account::displayStatus( void ) const
 {
 	//timehere
+    _displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";deposits:" <<
         _nbDeposits << ";withdrawals:" << _nbWithdrawals << std::endl;
     return ;
 }
 
 //time function here VOID
+void	Account::_displayTimestamp( void )
+{
+    time_t     now = time(0);
+    struct tm  tstruct;
+    char       buf[80];
+    tstruct = *localtime(&now);
+    strftime(buf, sizeof(buf), "[%Y%m%d_%M%H%S] ", &tstruct);
+    std::cout << buf ;
+}
