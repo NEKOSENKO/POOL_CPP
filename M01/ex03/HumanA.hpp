@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 14:28:04 by mbrija            #+#    #+#             */
-/*   Updated: 2021/10/21 14:56:46 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/10/21 15:29:09 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class HumanA
 {
 private:
     std::string name;
-    Weapon weap;
+    Weapon *weap;
 public:
-    HumanA(const char *name , Weapon wp);
+    HumanA(const char *name , Weapon &wp);
     ~HumanA();
     void attack();
 };
