@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 12:23:39 by mbrija            #+#    #+#             */
-/*   Updated: 2021/11/04 15:19:43 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/11/04 15:24:30 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ int main (int ac, char **av)
         std::string content( (std::istreambuf_iterator<char>(filein) ),
                        (std::istreambuf_iterator<char>()    ) );
         
-        if((index = content.find(s1)) != 0)
+        while((index = content.find(s1)) != 0)
         {
             if (index == -1)
-                return 0;
+                break ;
             content.erase(index, s1.length());
             content.insert(index, s2);
         }
