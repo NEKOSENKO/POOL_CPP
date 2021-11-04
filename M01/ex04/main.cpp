@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 12:23:39 by mbrija            #+#    #+#             */
-/*   Updated: 2021/11/04 15:24:30 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/11/04 15:31:15 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main (int ac, char **av)
         s2 = av[3];
 
         std::fstream filein;
-        std::fstream fileout( file + ".replace");
+        std::ofstream fileout(file + ".replace");
 
         filein.open(av[1]);
         std::string content( (std::istreambuf_iterator<char>(filein) ),
@@ -42,9 +42,10 @@ int main (int ac, char **av)
             content.erase(index, s1.length());
             content.insert(index, s2);
         }
-        std::cout << content << std::endl;
-        
-        //filein.close();
+      
+        fileout << content << std::endl;
+        //fileout.close();
+        filein.close();
     }
     return 0;
 }
