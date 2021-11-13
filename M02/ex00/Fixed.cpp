@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:16:59 by mbrija            #+#    #+#             */
-/*   Updated: 2021/11/11 16:16:49 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/11/13 15:11:41 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &p)
 {
      std::cout << "Copy Const Called" << std::endl;
-    *this = p;
+    this->value = p.getRawBits();
 }
 
 Fixed::~Fixed()
@@ -34,7 +34,7 @@ Fixed::~Fixed()
 void Fixed::operator=(const Fixed &p)
 { 
     std::cout << "Assignation Op Called" << std::endl;
-    this->value = p.value;
+    this->value = p.getRawBits();
 }
 
 int Fixed::getRawBits() const
