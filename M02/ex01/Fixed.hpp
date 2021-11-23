@@ -16,12 +16,13 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <math>
 
 class Fixed
 {
 private:
     int value;
-    static const int fractionalBit;
+    static const int fractionalBit = 8;
 public:
     Fixed();
     Fixed(const Fixed &p);
@@ -35,9 +36,9 @@ public:
     void setRawBits(int const raw);
 };
 
-std::ostream& operator<<(std::ostream &os, const float& floatingPoint)
+std::ostream& operator<<(std::ostream &os, const Fixed& floatingPoint)
 {
-    //code goes here
+    os << floatingPoint.toFloat();
     return os;
 }
 

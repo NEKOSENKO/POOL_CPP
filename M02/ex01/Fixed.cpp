@@ -28,15 +28,25 @@ Fixed::Fixed(const Fixed &p)
 
 Fixed::Fixed(const int num)
 {
-    
+    std::cout << "INT Const Called" << std::endl;
+    this->value = p * (1 << Fixed::fractionalBit);
 }
 
 Fixed::Fixed(const float num)
 {
-    
+    std::cout << "float Const Called" << std::endl;
+    this->value = roundf(p * (1 << Fixed::fractionalBit));
 }
 
+float Fixed::toFloat( void ) const
+{
+     return (float)value / (1 << Fixed::fractionalBit);
+}
 
+int Fixed::toInt( void ) const
+{
+    return value / (1 << Fixed::fractionalBit);
+}
 
 Fixed::~Fixed()
 {
