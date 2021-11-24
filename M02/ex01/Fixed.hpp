@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:16:56 by mbrija            #+#    #+#             */
-/*   Updated: 2021/11/13 18:57:15 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/11/17 15:22:57 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <cmath>
 
 class Fixed
 {
