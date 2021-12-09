@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:16:52 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/09 16:44:45 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/09 17:14:12 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ int main( void )
     std::cout << a++ << std::endl;
     std::cout << a << std::endl;
     std::cout << b << std::endl;
-    //std::cout << Fixed::max( a, b ) << std::endl;
+    std::cout << Fixed::max( a, b ) << std::endl;
     return 0;
 }
