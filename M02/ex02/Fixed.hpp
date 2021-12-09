@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:16:56 by mbrija            #+#    #+#             */
-/*   Updated: 2021/11/24 14:40:29 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/09 15:59:32 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,23 @@ public:
     ~Fixed();
     float toFloat( void ) const;
     int toInt( void ) const;
-    void operator= (const Fixed &p);
+    Fixed & operator= (const Fixed &p);
+    Fixed operator+ (const Fixed &p);
+    Fixed operator- (const Fixed &p);
+    Fixed operator* (const Fixed &p);
+    Fixed operator/ (const Fixed &p);
+
+    Fixed operator++();
+    Fixed operator++(int);
+
+    bool operator< (const Fixed &p) const;
+    bool operator<= (const Fixed &p) const;
+    bool operator> (const Fixed &p) const;
+    bool operator>= (const Fixed &p) const;
+    bool operator== (const Fixed &p) const;
+    bool operator!= (const Fixed &p) const;
+
+    
     int getRawBits() const;
     void setRawBits(int const raw);
 };
