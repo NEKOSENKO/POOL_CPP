@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 23:16:59 by mbrija            #+#    #+#             */
-/*   Updated: 2021/11/13 15:11:41 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/10 12:42:03 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &p)
 {
      std::cout << "Copy Const Called" << std::endl;
-    this->value = p.getRawBits();
+    *this = p;
 }
 
 Fixed::~Fixed()
