@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 13:50:41 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/11 14:51:15 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 12:44:02 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 ClapTrap::ClapTrap()
 {
+    std::cout << "ClapTrap Default Const Called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -26,11 +27,13 @@ ClapTrap::ClapTrap(std::string name)
 
 ClapTrap::ClapTrap(const ClapTrap &p)
 {
+    std::cout << "ClapTrap copy Const Called" << std::endl;
     *this = p;
 }
 
 ClapTrap::~ClapTrap()
 {
+        std::cout << "ClapTrap has been Destroid" << std::endl;
 }
 
 ClapTrap & ClapTrap::operator= (const ClapTrap &p)
