@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 15:01:41 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/11 15:36:55 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 13:03:34 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ScavTrap::ScavTrap()
     std::cout << "ScavTrap Default Const Called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     std::cout << "ScavTrap Name Const Called" << std::endl;
     this->name = name;
@@ -35,12 +35,17 @@ ScavTrap::~ScavTrap()
 
 ScavTrap & ScavTrap::operator= (const ScavTrap &p)
 {
-    
+    this->name = p.name;
+    this->attackDamage = p.attackDamage;
+    this->energyPoints = p.energyPoints;
+    this->hitPoints = p.hitPoints;
+
+    return *this;
 }
 
-void ClapTrap::attack( const std::string &target)
+void ScavTrap::attack( const std::string &target)
 {
-    std::cout << "ClapTrap From ScavTrap" << this->name << " attack " << target << ", causing " << this->attackDamage << " points of damage" << std::endl;
+    std::cout << "ClapTrap Attack From ScavTrap " << this->name << " attack " << target << ", causing " << this->attackDamage << " points of damage" << std::endl;
 }
 
 void ScavTrap::guardGate()

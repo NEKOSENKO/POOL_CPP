@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 15:01:41 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/13 12:48:17 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 13:13:33 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ FragTrap::FragTrap()
     std::cout << "FragTrap Default Const Called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
     std::cout << "FragTrap Name Const Called" << std::endl;
     this->name = name;
-    this->attackDamage = 20;
-    this->energyPoints = 50;
+    this->attackDamage = 30;
+    this->energyPoints = 100;
     this->hitPoints = 100;
 
 }
@@ -35,12 +35,12 @@ FragTrap::~FragTrap()
 
 FragTrap & FragTrap::operator= (const FragTrap &p)
 {
-    
-}
+    this->name = p.name;
+    this->attackDamage = p.attackDamage;
+    this->energyPoints = p.energyPoints;
+    this->hitPoints = p.hitPoints;
 
-void ClapTrap::attack( const std::string &target)
-{
-    std::cout << "ClapTrap From FragTrap" << this->name << " attack " << target << ", causing " << this->attackDamage << " points of damage" << std::endl;
+    return *this;
 }
 
 void FragTrap::highFivesGuys(void)

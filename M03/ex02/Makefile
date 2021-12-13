@@ -6,14 +6,14 @@
 #    By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/11 13:50:51 by mbrija            #+#    #+#              #
-#    Updated: 2021/12/11 15:08:55 by mbrija           ###   ########.fr        #
+#    Updated: 2021/12/13 13:10:52 by mbrija           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS=ClapTrap.cpp main.cpp ScavTrap.cpp
+SRCS=ClapTrap.cpp main.cpp ScavTrap.cpp FragTrap.cpp
 FLAGS=-Wextra -Wall -Werror
 
-NAME=ClapTrap
+NAME=FragTrap
 
 $(NAME):
 	clang++ $(FLAGS) $(SRCS) -o $(NAME)

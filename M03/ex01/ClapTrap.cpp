@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 13:50:41 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/13 12:44:02 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 13:04:35 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string name)
 {
+    std::cout << "ClapTrap Name Const Called" << std::endl;
     this->name = name;
     this->attackDamage = 0;
     this->energyPoints = 0;
