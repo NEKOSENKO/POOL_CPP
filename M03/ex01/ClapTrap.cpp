@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 13:50:41 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/13 13:04:35 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 15:02:53 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ ClapTrap & ClapTrap::operator= (const ClapTrap &p)
     return *this;
 }
 
-//ClapTrap <name> attack <target>, causing <damage> points of damage!
 
 void ClapTrap::attack(std::string const & target)
 {
