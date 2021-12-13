@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 13:17:31 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/13 15:00:03 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 15:08:41 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ DiamondTrap::~DiamondTrap()
 }
 
 DiamondTrap & DiamondTrap::operator= (const DiamondTrap &p)
-{make 
+{
     this->name = p.name;
     this->attackDamage = p.attackDamage;
     this->energyPoints = p.energyPoints;
