@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 15:01:38 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/13 13:21:30 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 14:31:27 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ private:
 public:
     ScavTrap();
     ScavTrap(std::string name);
+    ScavTrap(const ScavTrap &p);
     ~ScavTrap();
     ScavTrap & operator= (const ScavTrap &p);
     void attack( const std::string &target);

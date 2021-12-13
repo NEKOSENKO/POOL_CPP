@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 15:01:41 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/13 13:03:34 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 14:31:11 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->energyPoints = 50;
     this->hitPoints = 100;
 
+}
+
+ScavTrap::ScavTrap(const ScavTrap &p)
+{
+    std::cout << "ScavTrap copy Const Called" << std::endl;
+    *this = p;
 }
 
 ScavTrap::~ScavTrap()
