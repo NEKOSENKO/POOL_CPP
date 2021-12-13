@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 13:15:53 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/13 14:48:22 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/13 14:55:52 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 class DiamondTrap : public ScavTrap, public FragTrap
 {
 private:
-    /* data */
+    std::string name;
 public:
     DiamondTrap();
     DiamondTrap(std::string name); 
