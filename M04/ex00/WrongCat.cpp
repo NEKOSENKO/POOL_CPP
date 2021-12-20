@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/19 15:27:21 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/20 12:52:39 by mbrija           ###   ########.fr       */
+/*   Created: 2021/12/20 12:28:10 by mbrija            #+#    #+#             */
+/*   Updated: 2021/12/20 12:50:43 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog(/* args */): Animal("Dog")
+WrongCat::WrongCat(/* args */):WrongAnimal("WrongCat")
 {
-     std::cout << "Dog Const Called" << std::endl;
-     this->type = "Dog";
+     std::cout << "WrongCat Const Called" << std::endl;
+     this->type = "WrongCat";
 }
 
-Dog::Dog(const Dog &p)
+WrongCat::WrongCat(const WrongCat &p)
 {
-     std::cout << "Dog Copy Const Called" << std::endl;
+     std::cout << "WrongCat Copy Const Called" << std::endl;
      *this = p;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-     std::cout << "Dog Deconst Called" << std::endl;
+     std::cout << "WrongCat Deconst Called" << std::endl;
 }
 
-Dog &Dog::operator= (const Dog &p)
+WrongCat &WrongCat::operator= (const WrongCat &p)
 {
      this->type = p.type;
      return *this;
 }
 
-void Dog::makeSound() const
+void WrongCat::makeSound() const
 {
-    std::cout << " This is DOG" << std::endl;
+    std::cout << " This is CAT " << std::endl;
 }

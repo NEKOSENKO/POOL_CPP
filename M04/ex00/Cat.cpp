@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 15:27:16 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/20 12:17:49 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/20 12:52:18 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,10 @@ Cat::~Cat()
 Cat &Cat::operator= (const Cat &p)
 {
      this->type = p.type;
+     return *this;
 }
 
 void Cat::makeSound() const
 {
-    std::cout << " This is " << this->type << std::endl;
+    std::cout << " This is CAT" << std::endl;
 }
