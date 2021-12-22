@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/19 15:27:24 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/20 17:53:32 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/21 16:19:07 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ private:
     Brain *brain;
 public:
     Dog(/* args */);
-    Dog(const Dog &p);
+    Dog(Dog &p);
     Dog &operator= (const Dog &p);
     virtual ~Dog();
     virtual void makeSound() const;
