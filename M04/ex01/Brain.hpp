@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 12:58:15 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/20 17:54:12 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/21 16:13:10 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ private:
 public:
     std::string ideas[100];
     Brain(/* args */);
+    // Brain & operator= (const Brain &p);
+    
     virtual ~Brain();
 };
 
