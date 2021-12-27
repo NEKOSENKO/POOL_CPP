@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:29 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/27 14:03:35 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/27 14:56:11 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,26 @@ public:
 
 	const std::string &Bureaucrat::getName() const;
 	int getGrade() const;
+
+	 class GradeTooHighException : public std::exception
+
+    {
+        const char *what(void) const throw()
+        {
+            return "Grade is too High";
+        }
+    };
+
+    class GradeTooLowException : public std::exception
+    {
+        const char *what(void) const throw()
+        {
+            return "Grade is too Low";
+        }
+    };
+
+	void incrementGrade();
+	void decrementGrade();
 };
 
 std::ostream &operator<< (std::ostream &os ,const Bureaucrat &p);
