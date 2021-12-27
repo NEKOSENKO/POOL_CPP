@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:25 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/27 14:59:45 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/27 15:05:42 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &p):name(p.name)
 
 Bureaucrat &Bureaucrat::operator= (const Bureaucrat &p)
 {
-	this->grade = grade;
+	this->grade = p.grade;
 	return *this;
 }
 

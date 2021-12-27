@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:29 by mbrija            #+#    #+#             */
-/*   Updated: 2021/12/27 14:56:11 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/12/27 15:05:21 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ public:
 	Bureaucrat &operator= (const Bureaucrat &p);
 	~Bureaucrat();
 
-	const std::string &Bureaucrat::getName() const;
+	const std::string &getName() const;
 	int getGrade() const;
 
 	 class GradeTooHighException : public std::exception
