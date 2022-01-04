@@ -6,24 +6,32 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:32 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/04 15:19:43 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/04 16:30:28 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
     try
     {
-        Bureaucrat b("Name", 150);
-        b.incrementGrade();
+        Bureaucrat b("Name", 151);
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+    try
+    {
+        Form f("Form", 20);
+        Bureaucrat br("Br", 100);
 
-        std::cout << b;
-        std::cout << b;
-            b.decrementGrade();
-        std::cout << b;
+        br.signForm(f);
+        
     }
     catch (const std::exception &e)
     {
