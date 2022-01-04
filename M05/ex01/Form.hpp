@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/04 16:26:31 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/04 18:25:07 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "Bureaucrat.hpp"
 
+
+class Bureaucrat;
 class Form
 {
 private:

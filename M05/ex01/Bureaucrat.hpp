@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:29 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/04 16:34:45 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/04 18:26:44 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <stdexcept>
 #include "Form.hpp"
 
+class Form;
 class Bureaucrat
 {
 private:

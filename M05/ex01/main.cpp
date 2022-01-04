@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:32 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/04 16:30:28 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/04 18:27:43 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main()
 {
     try
     {
-        Bureaucrat b("Name", 151);
+        Bureaucrat b("Name", 0);
     }
     catch (const std::exception &e)
     {
@@ -28,7 +28,7 @@ int main()
     try
     {
         Form f("Form", 20);
-        Bureaucrat br("Br", 100);
+        Bureaucrat br("Br", 20);
 
         br.signForm(f);
         

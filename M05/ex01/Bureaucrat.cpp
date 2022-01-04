@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/04 16:27:31 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/04 18:28:07 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,9 @@ int Bureaucrat::getGrade() const
 void Bureaucrat::signForm(Form form)
 {
 	if(form.beSigned(*this) == true)
-		std::cout << this->getName() << "signs" << form.getName() << std::endl;	
+		std::cout << this->getName() << " signs" << form.getName() << std::endl;	
 	else
-		std::cout << this->getName() << "signs " << form.getName() << "because "<< "Grade is Too low" << std::endl;	
+		std::cout << this->getName() << " Can't signs " << form.getName() << "because "<< "Grade is Too low" << std::endl;	
 }
 
 void Bureaucrat::incrementGrade()
