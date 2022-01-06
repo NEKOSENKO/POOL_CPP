@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:14 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/04 16:26:23 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/06 15:37:23 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,28 @@ Form::Form(/* args */)
 {
 }
 
-Form::Form(const std::string Bname, int Bgrade):name(Bname)
+Form::Form(const std::string Fname, int Fgrade):name(Fname)
 {
-    this->sign = false;
-	if (Bgrade < 1)
+    this->is_signed = false;
+	if (Fgrade < 1)
 		throw GradeTooHighException();
-	else if (Bgrade > 150)
+	else if (Fgrade > 150)
 		throw GradeTooLowException();
 	else
-		this->grade = Bgrade;
+		this->grade = Fgrade;
+	
+}
+
+Form::Form(const std::string Fname, int Fgrade, int Fsign):name(Fname)
+{
+    this->is_signed = false;
+	this->sign = Fsign;
+	if (Fgrade < 1)
+		throw GradeTooHighException();
+	else if (Fgrade > 150)
+		throw GradeTooLowException();
+	else
+		this->grade = Fgrade;
 	
 }
 	
@@ -63,11 +76,11 @@ bool Form::beSigned(Bureaucrat bur)
 {
     if (bur.getGrade() <= this->grade)
 	{
-        this->sign = true;
+        this->is_signed = true;
 		return true;
 	}
     else 
-        this->sign = false;
+        this->is_signed = false;
 	return false;
 }
 

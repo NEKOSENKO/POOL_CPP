@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/06 12:24:59 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/06 15:28:12 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,15 @@ class Bureaucrat;
 class Form
 {
 private:
-   bool sign;
-   const std::string name;
-   int grade;
+   bool     is_signed;
+   int      sign;
+   const    std::string name;
+   int      grade;
 
 public:
 Form(/* args */);
-	Form(const std::string Bname, int Bgrade);
+	Form(const std::string Fname, int Fgrade);
+	Form(const std::string Fname, int Fgrade, int Fsign);
 	Form(const Form &p);
 	Form &operator= (const Form &p);
 	~Form();
@@ -36,7 +38,7 @@ Form(/* args */);
     int getSign() const;
     bool beSigned(Bureaucrat bur);
 
-	 class GradeTooHighException : public std::exception
+	class GradeTooHighException : public std::exception
 
     {
         const char *what(void) const throw()
