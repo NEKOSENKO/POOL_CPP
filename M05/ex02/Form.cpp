@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:14 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/06 15:37:23 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/31 13:23:44 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,10 @@ void Form::decrementGrade()
 		this->grade++;
 }
 
+int Form::execute(Bureaucrat const & executor)
+{
+	
+}
 
 std::ostream & operator<< (std::ostream &os ,const Form &p)
 {

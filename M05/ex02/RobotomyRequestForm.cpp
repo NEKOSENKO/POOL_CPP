@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:33:56 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/06 17:21:21 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/31 10:49:50 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,16 @@ RobotomyRequestForm::RobotomyRequestForm(/* args */)
 RobotomyRequestForm::RobotomyRequestForm(std::string target): Form("RobotomyRequestForm", 45, 72)
 {
     this->target = target;
+    this->robotonomy = false;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
+}
+
+void RobotomyRequestForm::setRobo(bool val)
+{
+    this->robotonomy = val;
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
@@ -33,5 +39,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
     else 
     {
         std::cout << this->target << " Drilling Noise " << std::endl;
+        std::cout << this->target << " has been robotomized successfully  " << std::endl;
+        std::cout << " the robotomy failed successfully " << std::endl;
     }
 }

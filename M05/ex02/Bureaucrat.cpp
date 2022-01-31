@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/04 18:28:07 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/31 12:03:29 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,11 @@ void Bureaucrat::decrementGrade()
 		throw GradeTooHighException();
 	else
 		this->grade++;
+}
+
+void Bureaucrat::executeForm(Form const & form)
+{
+	
 }
 
 

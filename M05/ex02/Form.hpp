@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/06 15:28:12 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/01/31 13:22:13 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #define _FORM_HPP_
 
 #include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 
 class Bureaucrat;
@@ -26,7 +29,10 @@ private:
    int      grade;
 
 public:
-Form(/* args */);
+    PresidentialPardonForm p_pardon;
+    RobotomyRequestForm    r_request;
+    ShrubberyCreationForm  s_creation;
+    Form(/* args */);
 	Form(const std::string Fname, int Fgrade);
 	Form(const std::string Fname, int Fgrade, int Fsign);
 	Form(const Form &p);
@@ -37,6 +43,8 @@ Form(/* args */);
 	int getGrade() const;
     int getSign() const;
     bool beSigned(Bureaucrat bur);
+    int execute(Bureaucrat const & executor);
+
 
 	class GradeTooHighException : public std::exception
 
