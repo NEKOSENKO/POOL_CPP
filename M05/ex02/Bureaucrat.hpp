@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:29 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/31 12:00:32 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/02 18:03:17 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ public:
 
 	const std::string &getName() const;
 	int getGrade() const;
-    void signForm(Form form);
+    void signForm(Form &form);
     void executeForm(Form const & form);
 
 	 class GradeTooHighException : public std::exception

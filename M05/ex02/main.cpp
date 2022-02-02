@@ -6,13 +6,14 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:32 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/04 18:27:43 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/02 16:59:13 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
@@ -27,10 +28,10 @@ int main()
     
     try
     {
-        Form f("Form", 20);
+        ShrubberyCreationForm f("Desktop");
         Bureaucrat br("Br", 20);
 
-        br.signForm(f);
+        br.executeForm(f);
         
     }
     catch (const std::exception &e)

@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:34:05 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/06 17:17:01 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/02 17:59:40 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define SHRUBBERY_HPP
 
 #include "Form.hpp"
-
+class Form;
 
 class ShrubberyCreationForm : public Form
 {
@@ -24,7 +24,7 @@ public:
     ShrubberyCreationForm(/* args */);
     ShrubberyCreationForm(std::string target);
     ~ShrubberyCreationForm();
-    void execute(Bureaucrat const & executor) const;
+    int execute(Bureaucrat const & executor) const;
 };
 
 
