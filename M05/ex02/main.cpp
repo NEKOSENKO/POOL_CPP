@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:32 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 16:59:13 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/02 18:26:49 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,11 @@
 
 int main()
 {
-    try
-    {
-        Bureaucrat b("Name", 0);
-    }
-    catch (const std::exception &e)
-    {
-        std::cerr << e.what() << '\n';
-    }
     
     try
     {
+        Bureaucrat br("Br", 140);
         ShrubberyCreationForm f("Desktop");
-        Bureaucrat br("Br", 20);
 
         br.executeForm(f);
         

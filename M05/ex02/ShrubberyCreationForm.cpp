@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:34:02 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 18:00:39 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/02 18:33:11 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 int ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if (executor.getGrade() > this->getGrade())
+    {
         throw GradeTooLowException();
+    }
     else 
     {
         std::ofstream o(this->target + "_shrubbery");
