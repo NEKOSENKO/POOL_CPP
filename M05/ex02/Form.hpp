@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/31 13:22:13 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/02 16:07:23 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ public:
 	int getGrade() const;
     int getSign() const;
     bool beSigned(Bureaucrat bur);
-    int execute(Bureaucrat const & executor);
+    void execute(Bureaucrat const & executor) = 0;
 
 
 	class GradeTooHighException : public std::exception

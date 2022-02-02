@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:14 by mbrija            #+#    #+#             */
-/*   Updated: 2022/01/31 13:23:44 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/02 16:04:54 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,11 +98,6 @@ void Form::decrementGrade()
 		throw GradeTooHighException();
 	else
 		this->grade++;
-}
-
-int Form::execute(Bureaucrat const & executor)
-{
-	
 }
 
 std::ostream & operator<< (std::ostream &os ,const Form &p)
