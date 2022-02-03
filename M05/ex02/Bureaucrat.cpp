@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 18:34:57 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/03 15:41:38 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,14 +73,12 @@ void Bureaucrat::decrementGrade()
 	if (this->grade == 150)
 		throw GradeTooHighException();
 	else
-		this->grade++;
+		this->grade++; 
 }
 
 void Bureaucrat::executeForm(Form const & form)
 {
-	if (form.execute(*this) != 1)
-		std::cout << "Error Execution Failed" << std::endl;
-	else 
+	if (form.execute(*this) == 1)
 		std::cout << this->getName() << " executed " << form.getName() << std::endl;
 		
 }

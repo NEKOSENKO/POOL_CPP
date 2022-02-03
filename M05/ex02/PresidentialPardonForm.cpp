@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:33:51 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 18:33:16 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/03 15:40:37 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 int PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
     if (executor.getGrade() > this->getGrade())
-        throw GradeTooLowException();
+        throw CantexecuteFormException();
     else 
     {
         std::cout << this->target << "  has been pardoned by Zafod Beeblebrox. " << std::endl;

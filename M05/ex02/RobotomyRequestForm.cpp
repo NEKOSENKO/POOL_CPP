@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:33:56 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 18:33:04 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/03 15:40:30 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void RobotomyRequestForm::setRobo(bool val)
 int RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     if (executor.getGrade() > this->getGrade())
-        throw GradeTooLowException();
+        throw CantexecuteFormException();
     else 
     {
         std::cout << this->target << " Drilling Noise " << std::endl;

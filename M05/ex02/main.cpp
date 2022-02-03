@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:32 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 18:26:49 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/03 15:41:55 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main()
     
     try
     {
-        Bureaucrat br("Br", 140);
+        Bureaucrat br("Br", 20);
         ShrubberyCreationForm f("Desktop");
 
         br.executeForm(f);

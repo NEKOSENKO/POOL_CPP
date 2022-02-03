@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 17:59:20 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/03 15:40:07 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,14 @@ public:
         const char *what(void) const throw()
         {
             return "Grade is too Low";
+        }
+    };
+    
+    class CantexecuteFormException : public std::exception
+    {
+        const char *what(void) const throw()
+        {
+            return "Error Execution Failed";
         }
     };
 

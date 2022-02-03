@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:34:02 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 18:33:11 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/03 15:40:21 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
     if (executor.getGrade() > this->getGrade())
     {
-        throw GradeTooLowException();
+        throw CantexecuteFormException();
     }
     else 
     {
