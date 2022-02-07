@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 15:21:25 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/03 15:40:07 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 10:48:07 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ public:
 	Form(const std::string Fname, int Fgrade, int Fsign);
 	Form(const Form &p);
 	Form &operator= (const Form &p);
-	~Form();
+	virtual ~Form();
 
 	const std::string &getName() const;
 	int getGrade() const;

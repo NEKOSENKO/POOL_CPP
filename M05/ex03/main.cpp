@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 12:57:32 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/03 18:13:49 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 10:49:31 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main()
     {
     Intern someRandomIntern;
     Form* rrf;
-    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+    rrf = someRandomIntern.makeForm("Robotomy Request", "Bender");
     }
 
     return 0;
