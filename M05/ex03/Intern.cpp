@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 18:04:56 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/07 11:28:06 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:51:57 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Form* Intern::makeForm(std::string FormName, std::string Target)
           }
       if (j == -1)
         {
-          std::cout << "Creation Failed " << std::endl;
+          std::cout << "Creation Failed : Form does not exist " << std::endl;
           return NULL;
         }
       std::cout << "Intern creates " << FormName << std::endl;
