@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:33:56 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/07 11:06:48 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:37:02 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,13 @@ int RobotomyRequestForm::execute(Bureaucrat const & executor) const
         throw CantexecuteFormException();
     else 
     {
-        std::cout << this->target << " Drilling Noise " << std::endl;
-        std::cout << this->target << " has been robotomized successfully  " << std::endl;
-        std::cout << " the robotomy failed successfully " << std::endl;
+        srand(std::time(0));
+        std::cout << "Drilling Noise" << std::endl;
+        if (rand() % 2 == 1)
+            std::cout << this->target << " has been robotomized successfully" << std::endl;
+        else
+            std::cout << "the robotomy failed successfully" << std::endl;
+
         return 1;
     }
     return 0;

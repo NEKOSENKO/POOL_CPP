@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/03 18:04:56 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/07 10:50:26 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:28:06 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ Form* Intern::makeForm(std::string FormName, std::string Target)
       std::string requests[3] = {"Robotomy Request", "Shrubbery Creation", "Presidential Pardon"};
       
       Form *form[3] = {
-        new ShrubberyCreationForm(Target),
         new RobotomyRequestForm(Target),
+        new ShrubberyCreationForm(Target),
         new PresidentialPardonForm(Target)
         
         };
