@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:33:56 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/03 15:40:30 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:07:02 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,17 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target): Form("RobotomyRequ
 RobotomyRequestForm::~RobotomyRequestForm()
 {
 }
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &p)
+{
+    *this = p;
+}
+RobotomyRequestForm &RobotomyRequestForm::operator= (const RobotomyRequestForm &p)
+{
+    this->target = p.target;
+    return *this;
+}
+
 
 void RobotomyRequestForm::setRobo(bool val)
 {

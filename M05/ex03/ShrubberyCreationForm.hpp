@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:34:05 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/02 17:59:40 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:01:27 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ public:
     ShrubberyCreationForm(/* args */);
     ShrubberyCreationForm(std::string target);
     ~ShrubberyCreationForm();
+    ShrubberyCreationForm(const ShrubberyCreationForm &p);
+    ShrubberyCreationForm &operator= (const ShrubberyCreationForm &p);
     int execute(Bureaucrat const & executor) const;
 };
 

@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:34:02 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/03 15:40:21 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:07:06 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,17 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target): Form("Shrubber
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
 }
+
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &p)
+{
+    *this = p;
+}
+ShrubberyCreationForm &ShrubberyCreationForm::operator= (const ShrubberyCreationForm &p)
+{
+    this->target = p.target;
+    return *this;
+}
+
 
 int ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {

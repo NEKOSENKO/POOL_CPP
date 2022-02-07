@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/04 18:33:51 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/03 15:40:37 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/07 11:06:34 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,15 @@ PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("Presi
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
+}
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &p)
+{
+    *this = p;
+}
+PresidentialPardonForm &PresidentialPardonForm::operator= (const PresidentialPardonForm &p)
+{
+    this->target = p.target;
+    return *this;
 }
 
 int PresidentialPardonForm::execute(Bureaucrat const & executor) const
