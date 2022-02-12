@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 12:03:26 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/12 18:14:45 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/12 18:46:30 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int  main (int ac, char **av)
         }
 
         f = std::stof(input);
-        i = std::stoi(input);
-        d = std::stod(input);
-        c = i;
+        i = static_cast<int>(f);
+        d = static_cast<double>(f);
+        c = static_cast<char>(i);
 
         if (i >= 33 && i <= 124)
             std::cout << "char : " << c << std::endl;
