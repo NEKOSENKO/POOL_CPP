@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 18:19:49 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/15 14:30:38 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/16 13:46:11 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ Data* deserialize(uintptr_t raw)
 
 int main ()
 {
-    Data *ptr = NULL;
-    Data *ptr2 = NULL;
+    Data *ptr = new Data;
+    Data *ptr2;
     ptr->data = "SENKO";
 
     uintptr_t uni = serialize(ptr);
