@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 12:23:39 by mbrija            #+#    #+#             */
-/*   Updated: 2021/11/04 15:31:15 by mbrija           ###   ########.fr       */
+/*   Updated: 2021/11/24 15:45:15 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int main (int ac, char **av)
         filein.open(av[1]);
         std::string content( (std::istreambuf_iterator<char>(filein) ),
                        (std::istreambuf_iterator<char>()    ) );
-        
         while((index = content.find(s1)) != 0)
         {
             if (index == -1)
