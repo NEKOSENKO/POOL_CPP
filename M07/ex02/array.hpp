@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:23:00 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/22 14:13:04 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/22 14:43:59 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,20 +51,20 @@ public:
         if (_array)
             delete [] _array;
         _array = new T[p._len];
-        for (int i = 0; i < _len; i++)
+        for (unsigned int i = 0; i < _len; i++)
         {
-            _array[i] = p._array[i]
+            _array[i] = p._array[i];
         }
         _len = p._len;
         
         return (*this);
     }
-    int &operator[] (int size)
+    int &operator[] (unsigned int size)
     {
         if (size >= _len || size < 0)
         {
             throw  OutofBoundException();
-            exit 0;        
+            exit(0);        
         }
         return (_array[size]);
     }
