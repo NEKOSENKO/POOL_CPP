@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:23:00 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/22 14:43:59 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/22 17:00:52 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 
     Array()
     {
-        _array = NULL;
+        _array = new T[0];
         _len = 0;
     }
     Array(unsigned int n)
@@ -34,7 +34,11 @@ public:
     }
     Array(Array &p)
     {
-        *this = p;
+        this->_array = new T[p._len];
+        
+        for (unsigned int i = 0; i < p._len; i++)
+            _array[i] = p._array[i];
+        _len = p._len;
     }
     
     class OutofBoundException : public std::exception
@@ -51,10 +55,9 @@ public:
         if (_array)
             delete [] _array;
         _array = new T[p._len];
+        
         for (unsigned int i = 0; i < _len; i++)
-        {
             _array[i] = p._array[i];
-        }
         _len = p._len;
         
         return (*this);
