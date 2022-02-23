@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:23:26 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/22 17:01:19 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/23 14:53:25 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int main(int, char**)
     {
         numbers[MAX_VAL] = 0;
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         std::cerr << e.what() << '\n';
     }
@@ -61,6 +61,6 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
-    delete [] mirror;//
+    delete[] mirror; //
     return 0;
 }

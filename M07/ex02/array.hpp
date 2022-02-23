@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 13:23:00 by mbrija            #+#    #+#             */
-/*   Updated: 2022/02/22 17:00:52 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/02/23 15:01:13 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ public:
             delete [] _array;
         _array = new T[p._len];
         
-        for (unsigned int i = 0; i < _len; i++)
+        for (unsigned int i = 0; i < p._len; i++)
             _array[i] = p._array[i];
         _len = p._len;
         

@@ -12,29 +12,58 @@
 
 #include "iter.hpp"
 
-
-void uppercase(char c)
+class Awesome
 {
-    std::cout << (char)(c - 32);
-}
+public:
+    Awesome(void) : _n(42) { return; }
+    int get(void) const { return this->_n; }
 
-void power(int x)
+private:
+    int _n;
+};
+std::ostream &operator<<(std::ostream &o, Awesome const &rhs)
 {
-    std::cout << x * x << " ";
+    o << rhs.get();
+    return o;
 }
-
-#define ARR_SIZE 6
+template <typename T>
+void print(T const &x)
+{
+    std::cout << x << std::endl;
+    return;
+}
 
 int main()
 {
-    char    str[ARR_SIZE + 1] = "abcdef";
-    int     arr[ARR_SIZE] = {0, 1, 2, 3, 4, 5};
-
-    iter(str, ARR_SIZE, uppercase);
-    std::cout << std::endl;;
-    
-    iter(arr, ARR_SIZE, power);
-    std::cout << std::endl;;
-
+    int tab[] = {0, 1, 2, 3, 4}; // <--- I never understood why you can't write int[] tab. Wouldn't that make more sense?
+    Awesome tab2[5];
+    iter(tab, 5, print);
+    iter(tab2, 5, print);
     return 0;
 }
+
+// void uppercase(const char &c)
+// {
+//     std::cout << (char)(c - 32);
+// }
+
+// void power(const int &x)
+// {
+//     std::cout << x * x << " ";
+// }
+
+// #define ARR_SIZE 6
+
+// int main()
+// {
+//     char    str[ARR_SIZE + 1] = "abcdef";
+//     int     arr[ARR_SIZE] = {0, 1, 2, 3, 4, 5};
+
+//     iter(str, ARR_SIZE, uppercase);
+//     std::cout << std::endl;;
+    
+//     iter(arr, ARR_SIZE, power);
+//     std::cout << std::endl;;
+
+//     return 0;
+// }
