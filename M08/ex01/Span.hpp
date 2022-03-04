@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 14:03:48 by mbrija            #+#    #+#             */
-/*   Updated: 2022/03/01 17:13:50 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/03/04 11:35:49 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ public:
     span &operator= (const span &p);
     void addNumber(int nToAdd);
     void print_span();
+    void shortestSpan();
+    void longestSpan();
     ~span();
 };
