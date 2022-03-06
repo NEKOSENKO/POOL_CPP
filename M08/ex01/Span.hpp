@@ -6,13 +6,14 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 14:03:48 by mbrija            #+#    #+#             */
-/*   Updated: 2022/03/04 11:35:49 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/03/06 16:33:31 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once 
 
 #include <iostream>
+#include <ctime>
 #include <algorithm>
 #include <vector>
 
@@ -29,5 +30,7 @@ public:
     void print_span();
     void shortestSpan();
     void longestSpan();
+    void addRange(int range);
     ~span();
 };
+// std::ostream& operator<<(std::ostream &os, const span &sp);
