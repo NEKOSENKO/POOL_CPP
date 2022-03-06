@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 16:45:15 by mbrija            #+#    #+#             */
-/*   Updated: 2022/03/06 17:10:42 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/03/06 20:40:56 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 #include <stack>
 
 template <typename T>
-class MutantStack
+class MutantStack : public std::stack<T>
 {
 private:
-    std::stack<T> data;
+    // std::stack<T> data;
 public:
     MutantStack(/* args */)
     {
-        data = new T[0];
+       
     }
     ~MutantStack()
     {
@@ -54,7 +54,7 @@ public:
         data.pop();
     }
 
-    
-    
+    typedef MutantStack::std::stack<T>::container_type::iterator iterator;
+    MutantStack<int>::std::stack<T>::container_type::iterator it = mstack.begin();
 };
 
