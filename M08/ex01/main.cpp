@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mbrija <mbrija@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 14:02:24 by mbrija            #+#    #+#             */
-/*   Updated: 2022/03/04 14:54:25 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/03/06 12:37:05 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int main ()
     a.addNumber(1);
     a.addNumber(8);
     a.addNumber(42);
-    a.addNumber(2);
+    a.addNumber(4);
     a.addNumber(13);
     a.addNumber(25);
     a.addNumber(10);
-    a.addNumber(11);
+    a.addNumber(15);
     a.print_span();
     a.longestSpan();
     a.shortestSpan();

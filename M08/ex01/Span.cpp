@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   span.cpp                                           :+:      :+:    :+:   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mbrija <mbrija@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 14:03:44 by mbrija            #+#    #+#             */
-/*   Updated: 2022/03/04 15:20:24 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/03/06 12:35:14 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,12 @@ void span::print_span()
 void span::shortestSpan()
 {
     std::sort(numbers.begin(), numbers.end());
-    size_t shortest = numbers.at(1) - numbers.at(1);
-    size_t shortest_check;
-    for (size_t i = 0; i < numbers.size(); i++)
-    {
-        if ((int)i <= numbers.back() && i != numbers.size() && numbers.at(i + 1) > numbers.at(i))
-            shortest_check = numbers.at(i + 1) - numbers.at(i);
-        if (shortest > shortest_check)
-            shortest = shortest_check;
-    }
-    std::cout << "shotrtest span is : " << shortest << std::endl;
+    int span = abs(numbers[0] - numbers[1]);
+    unsigned int len  = numbers.size() - 1;
+
+    for (unsigned int i = 0; i < len; i++)
+        span = std::min(span, abs(numbers[i] - numbers[i + 1]));
+    std::cout << "shotrtest span is : " << span << std::endl;
     
 }
 
