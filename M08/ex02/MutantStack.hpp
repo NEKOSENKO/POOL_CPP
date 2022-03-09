@@ -6,7 +6,7 @@
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 16:45:15 by mbrija            #+#    #+#             */
-/*   Updated: 2022/03/06 20:40:56 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/03/09 13:19:21 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,46 +15,27 @@
 #include <iostream>
 #include <algorithm>
 #include <stack>
+#include <vector>
 
 template <typename T>
 class MutantStack : public std::stack<T>
 {
 private:
-    // std::stack<T> data;
-public:
-    MutantStack(/* args */)
-    {
-       
-    }
-    ~MutantStack()
-    {
-    }
-    bool empty()
-    {
-        return data.empty();
-    }
-    
-    int size()
-    {
-        return data.size();
-    }
-    
-    T top()
-    {
-        return data.top();
-    }
-    
-    void push(T toPush)
-    {
-        data.push(toPush);
-    }
-    
-    T pop()
-    {
-        data.pop();
-    }
 
-    typedef MutantStack::std::stack<T>::container_type::iterator iterator;
-    MutantStack<int>::std::stack<T>::container_type::iterator it = mstack.begin();
+public:
+    MutantStack() {}
+	MutantStack(const MutantStack<T>& src) { *this = src; }
+	MutantStack<T>& operator=(const MutantStack<T>& rhs) 
+	{
+		this->c = rhs.c;
+		return *this;
+	}
+	~MutantStack() {}
+
+	typedef typename std::stack<T>::container_type::iterator iterator;
+
+	iterator begin() { return this->c.begin(); }
+	iterator end() { return this->c.end(); }
+
 };
 

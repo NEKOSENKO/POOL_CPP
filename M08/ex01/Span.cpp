@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   span.cpp                                           :+:      :+:    :+:   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbrija <mbrija@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 14:03:44 by mbrija            #+#    #+#             */
-/*   Updated: 2022/03/06 16:40:13 by mbrija           ###   ########.fr       */
+/*   Updated: 2022/03/09 10:40:21 by mbrija           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void span::print_span()
 
 void span::shortestSpan()
 {
+    std::sort(numbers.begin(), numbers.end());
     int shortest = abs(numbers[0] - numbers[1]);
     size_t len  = numbers.size() - 1;
 
